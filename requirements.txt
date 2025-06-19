@@ -2,4 +2,9 @@ pandas
 numpy
 seaborn
 matplotlib
--e .  ##runs the setup.py
+scikit-learn
+scipy
+catboost
+xgboost
+Flask
+#-e .  ##runs the setup.py
