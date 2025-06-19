@@ -7,4 +7,5 @@ scipy
 catboost
 xgboost
 Flask
-#-e .  ##runs the setup.py
+dill
+-e .  ##runs the setup.py
