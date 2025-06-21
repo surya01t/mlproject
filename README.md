@@ -1,4 +1,5 @@
-# End-to-End Machine Learning Project
+# End-to-End Machine Learning Project on Student Performance
+
 
 This repository provides a modular template for building end-to-end machine learning workflows in Python. The structure is designed for scalability and clarity, separating each stage of the ML pipeline into its own component.
 
@@ -10,6 +11,8 @@ mlprojects/
 ├── requirements.txt         # Python dependencies
 ├── setup.py                 # Project installation script
 ├── README.md                # Project documentation
+├── .ebextensions/           # AWS Elastic Beanstalk configuration
+│   └── python.config        # Python WSGI and environment settings
 └── src/
     ├── __init__.py
     ├── exception.py         # Custom error handling utilities
@@ -47,6 +50,22 @@ mlprojects/
 - pandas
 - numpy
 - seaborn
+
+## AWS Elastic Beanstalk Deployment    
+
+This project includes configuration for deployment on AWS Elastic Beanstalk:
+- The `.ebextensions/python.config` file sets the WSGI entry point for your application. Update the `WSGIPath` as needed for your main app (default: `application:application`).
+- For more details, see the [AWS Elastic Beanstalk Python documentation](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-python-container.html).
+
+## Localhost Web Server Usage
+
+To serve your model via a web server (for example, using Flask or FastAPI), run your application and access it locally:
+
+- **Default local server URL:**
+  
+  [http://localhost:5000](http://localhost:5000)
+
+Update the port if your application uses a different one. You can now send requests to your deployed model endpoint for inference and testing.
 
 ## Usage
 - Implement your logic in the respective component files under `src/components/` and pipelines under `src/pipeline/`.
