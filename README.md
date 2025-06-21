@@ -1,4 +1,5 @@
-# End-to-End Machine Learning Project
+# End-to-End Machine Learning Project on Student Performance
+
 
 This repository provides a modular template for building end-to-end machine learning workflows in Python. The structure is designed for scalability and clarity, separating each stage of the ML pipeline into its own component.
 
